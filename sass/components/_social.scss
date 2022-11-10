@@ -1,0 +1,26 @@
+.social {
+	&__icon {
+		fill: currentColor;
+	}
+}
+
+.social__item {
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+
+.social__link {
+	justify-content: center;
+	align-items: center;
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+	transition: background-color var(--general-transition-effect),
+		color var(--general-transition-effect);
+
+	&:focus,
+	&:hover {
+		background-color: var(--accent-color);
+	}
+}

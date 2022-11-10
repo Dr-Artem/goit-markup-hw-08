@@ -1,0 +1,15 @@
+.portfolio {
+	&__filter {
+		gap: 8px;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 50px;
+	}
+	&__list {
+		flex-wrap: wrap;
+		gap: var(--gap-distance);
+	}
+	&__card {
+		flex-basis: calc((100% - var(--gap-distance) * (var(--card-items) - 1)) / var(--card-items));
+	}
+}

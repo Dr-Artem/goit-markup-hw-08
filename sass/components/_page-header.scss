@@ -1,0 +1,13 @@
+.page-header {
+	border-bottom: 1px solid var(--header-border);
+	&__container {
+		align-items: center;
+	}
+	&__navigation {
+		align-items: center;
+	}
+	&__contacts {
+		margin-left: auto;
+		margin-right: 0;
+	}
+}

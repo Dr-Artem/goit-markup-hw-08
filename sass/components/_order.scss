@@ -1,0 +1,26 @@
+.order {
+	&__image-wraper {
+		max-width: 1600px;
+		background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+			url("../images/order/order-background.jpg") no-repeat center/cover, var(--order-image-background-color);
+		padding: 200px 0;
+		margin: 0 auto;
+	}
+	&__context--align {
+		text-align: center;
+	}
+	&__title {
+		max-width: 696px;
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.36;
+		text-align: center;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--accent-white-color);
+		margin: 0 auto 30px;
+	}
+	&__button {
+		padding: 10px 32px;
+	}
+}
