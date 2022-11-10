@@ -1,0 +1,33 @@
+.advantages {
+	&__title {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.03em;
+		color: var(--muted-text-color);
+	}
+	&__icon {
+		justify-content: center;
+		align-items: center;
+		max-width: 270px;
+		height: 120px;
+		background-color: var(--team-filter-icon-color);
+		border-radius: 4px;
+		margin-bottom: 30px;
+	}
+}
+
+.advantages__item {
+	max-width: 270px;
+
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
+}

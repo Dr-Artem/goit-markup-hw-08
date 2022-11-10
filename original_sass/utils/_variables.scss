@@ -1,0 +1,35 @@
+:root {
+	/* text color */
+	--main-text-color: #212121;
+	--muted-text-color: #757575;
+	--address-link-text-color: #FFFFFF99;
+	--team-filter-icon-color: #F5F4FA;
+
+	/* background color */
+	--footer-background-color: #2F303A;
+	--order-image-background-color: #C4C4C4;
+	--order-image-overlay: rgba(47, 48, 58, 0.4);
+	--footer-social-background: rgba(255, 255, 255, 0.1);
+	--backdrop-background-color: rgba(0, 0, 0, 0.2);
+	--working-image-label-background: rgba(47, 48, 58, 0.8);
+
+	/* additional-color */
+	--order-button-active: #188CE8;
+	--accent-color: #2196F3;
+	--accent-color-faded: rgba(33, 150, 243, 0.9);
+	--accent-white-color: #FFFFFF;
+	--card-border: #EEEEEE;
+	--header-border: #ECECEC;
+	--modal-close-border: rgba(0, 0, 0, 0.1);
+	--icon-fill: #AFB1B8;
+
+	/* shadows */
+	--order-button-box-shadow: rgba(0, 0, 0, 0.15);
+
+	/* :focus:hover effects */
+	--general-transition-effect: .25s cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* portfolio cards */
+	--card-items: 3;
+	--gap-distance: 30px;
+}
