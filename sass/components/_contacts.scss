@@ -1,29 +1,102 @@
-.contacts {
-	&__icon {
-		fill: currentColor;
-		margin-right: 10px;
-	}
-}
-
 .contacts__item {
-	&:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (max-width: $pre-tablet) {
+		&:not(:first-child) {
+			margin-bottom: 32px;
+		}
+	}
+	@media screen and (min-width: $tablet) {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	@media screen and (min-width: $desctop) {
+		&:not(:last-child) {
+			margin-right: 30px;
+			margin-bottom: 0;
+		}
 	}
 }
 
 .contacts__link {
-	align-items: center;
-	color: var(--muted-text-color);
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
 	text-decoration: none;
-	padding: 32px 0;
+	letter-spacing: 0.02em;
+	color: var(--muted-text-color);
 	transition: color var(--general-transition-effect);
 
 	&:focus,
 	&:hover {
 		color: var(--accent-color);
+	}
+	&.number {
+		font-size: 34px;
+		line-height: 40px;
+		color: #2196f3;
+
+		@media screen and (min-width: $tablet) {
+			align-items: center;
+			color: var(--muted-text-color);
+			font-size: 12px;
+			line-height: 1.16;
+			padding-bottom: 20px;
+		}
+		@media screen and (min-width: $desctop) {
+			font-size: 14px;
+			line-height: 1.14;
+			padding: 32px 0;
+		}
+	}
+	&.mail {
+		font-size: 24px;
+		line-height: 28px;
+
+		@media screen and (min-width: $tablet) {
+			align-items: center;
+			font-size: 12px;
+			line-height: 1.16;
+			padding-top: 20px;
+		}
+		@media screen and (min-width: $desctop) {
+			font-size: 14px;
+			line-height: 1.14;
+			padding: 32px 0;
+		}
+	}
+}
+
+.contacts__icon {
+	display: none;
+	fill: currentColor;
+	@media screen and (min-width: $tablet) {
+		display: inline;
+		margin-right: 8px;
+	}
+	@media screen and (min-width: $desctop) {
+		margin-right: 10px;
+	}
+}
+
+.contacts__link.mail {
+	& > .contacts__icon {
+		@media screen and (min-width: $tablet) {
+			width: 14px;
+			height: 10px;
+		}
+		@media screen and (min-width: $desctop) {
+			width: 16px;
+			height: 12px;
+		}
+	}
+}
+.contacts__link.number {
+	& > .contacts__icon {
+		@media screen and (min-width: $tablet) {
+			width: 10px;
+			height: 14px;
+		}
+		@media screen and (min-width: $desctop) {
+			width: 10px;
+			height: 16px;
+		}
 	}
 }

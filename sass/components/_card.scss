@@ -22,6 +22,7 @@
 		padding: 63px 24px;
 	}
 	&__context {
+		flex: 1 0 auto;
 		padding: 20px 24px;
 		border-color: var(--card-border);
 		border-style: solid;
@@ -45,7 +46,9 @@
 
 .card__link {
 	text-decoration: none;
-	display: inline-block;	
+	display: flex;
+	height: 100%;
+	flex-direction: column;	
 	transition: box-shadow var(--general-transition-effect);
 
 	&:focus,

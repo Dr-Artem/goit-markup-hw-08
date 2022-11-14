@@ -29,7 +29,26 @@
 	/* :focus:hover effects */
 	--general-transition-effect: .25s cubic-bezier(0.4, 0, 0.2, 1);
 
-	/* portfolio cards */
-	--card-items: 3;
+	/* items */
 	--gap-distance: 30px;
+
+	--advantages-tablet-items: 2;
+	--advantages-desctop-items: 4;
+
+	--team-tablet-items: 2;
+	--team-desctop-items: 4;
+
+	--client-mobile-items: 2;
+	--client-tablet-items: 3;
+
+	--portfolio-card-tablet-items: 2;
+	--portfolio-card-desctop-items: 3;
+	
 }
+
+$pre-mobile: 479.98px;
+$mobile: 480px;
+$pre-tablet: 767.98px;
+$tablet: 768px;
+$pre-desctop: 1199.98px;
+$desctop: 1200px;

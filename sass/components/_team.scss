@@ -1,16 +1,31 @@
 .team {
 	background-color: var(--team-filter-icon-color);
 
+	&__list {
+		flex-wrap: wrap;
+		gap: var(--gap-distance);
+	}
+
 	&__title {
 		font-weight: 700;
-		font-size: 36px;
-		line-height: 1.16;
+		font-size: 28px;
+		line-height: 1.18;
 		text-align: center;
 		letter-spacing: 0.03em;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
+
+		@media screen and (min-width: $desctop) {
+			margin-bottom: 50px;
+			font-size: 36px;
+			line-height: 1.16;
+		}
 	}
 	&__info {
-		padding: 30px 0;
+		padding: 30px 0 24px 0;
+
+		@media screen and (min-width: $desctop) {
+			padding: 30px 0;
+		}
 	}
 	&__person-name {
 		font-weight: 500;
@@ -35,13 +50,15 @@
 
 .team__card {
 	background: var(--accent-white-color);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-		0px 1px 1px rgba(0, 0, 0, 0.14),
-		0px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
+	flex-basis: 100%;
 
-	&:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc((100% - var(--gap-distance)) / var(--team-tablet-items));
+	}
+	@media screen and (min-width: $desctop) {
+		flex-basis: calc((100% - var(--gap-distance) * (var(--team-desctop-items) - 1)) / var(--team-desctop-items));
 	}
 }
 

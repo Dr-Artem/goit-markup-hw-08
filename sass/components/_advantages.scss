@@ -1,11 +1,20 @@
 .advantages {
+	&__list {
+		flex-wrap: wrap;
+		gap: var(--gap-distance);
+	}
 	&__title {
 		font-weight: 700;
 		font-size: 14px;
 		line-height: 1.14;
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
+		text-align: center;
 		margin-bottom: 10px;
+
+		@media screen and (min-width: $tablet) {
+			text-align: start;
+		}
 	}
 	&__text {
 		font-size: 14px;
@@ -16,7 +25,6 @@
 	&__icon {
 		justify-content: center;
 		align-items: center;
-		max-width: 270px;
 		height: 120px;
 		background-color: var(--team-filter-icon-color);
 		border-radius: 4px;
@@ -25,9 +33,14 @@
 }
 
 .advantages__item {
-	max-width: 270px;
+	flex-basis: 100%;
 
-	&:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc((100% - var(--gap-distance)) / var(--advantages-tablet-items));
+	}
+	@media screen and (min-width: $desctop) {
+		flex-basis: calc(
+			(100% - var(--gap-distance) * (var(--advantages-desctop-items) - 1)) / var(--advantages-desctop-items)
+		);
 	}
 }

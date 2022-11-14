@@ -1,4 +1,9 @@
 .working {
+	
+	@media screen and (max-width: $desctop) {
+		display: none;
+	}
+
 	&.section {
 		padding: 0 0 94px 0;
 	}

@@ -1,26 +1,77 @@
 .order {
 	&__image-wraper {
-		max-width: 1600px;
-		background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
-			url("../images/order/order-background.jpg") no-repeat center/cover, var(--order-image-background-color);
-		padding: 200px 0;
+		padding: 118px 0;
 		margin: 0 auto;
+		max-width: 480px;
+
+		background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+			url("../images/order/order-background-480.jpg") no-repeat center/cover, var(--order-image-background-color);
+
+		@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+			background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+				url("../images/order/order-background-480@2x.jpg") no-repeat center/cover,
+				var(--order-image-background-color);
+		}
+
+		@media screen and (min-width: $tablet) {
+			max-width: 768px;
+			background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+				url("../images/order/order-background-768.jpg") no-repeat center/cover,
+				var(--order-image-background-color);
+
+			@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+				background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+					url("../images/order/order-background-768@2x.jpg") no-repeat center/cover,
+					var(--order-image-background-color);
+			}
+		}
+
+		@media screen and (min-width: $desctop) {
+			padding: 200px 0;
+			max-width: 1600px;
+
+			background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+				url("../images/order/order-background-1200.jpg") no-repeat center/cover,
+				var(--order-image-background-color);
+
+			@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+				background: linear-gradient(var(--order-image-overlay), var(--order-image-overlay)),
+					url("../images/order/order-background-1200@2x.jpg") no-repeat center/cover,
+					var(--order-image-background-color);
+			}
+		}
 	}
 	&__context--align {
 		text-align: center;
 	}
 	&__title {
-		max-width: 696px;
+		max-width: 360px;
 		font-weight: 900;
-		font-size: 44px;
-		line-height: 1.36;
+		font-size: 26px;
+		line-height: 1.61;
 		text-align: center;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--accent-white-color);
 		margin: 0 auto 30px;
+
+		@media screen and (min-width: $desctop) {
+			max-width: 696px;
+			font-size: 44px;
+			line-height: 1.36;
+		}
 	}
 	&__button {
-		padding: 10px 32px;
+		padding: 10px 24px;
+
+		@media screen and (min-width: $desctop) {
+			padding: 10px 32px;
+		}
 	}
 }

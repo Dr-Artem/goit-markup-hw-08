@@ -1,14 +1,21 @@
 .client {
 	&__title {
 		font-weight: 700;
-		font-size: 36px;
-		line-height: 1.16;
 		text-align: center;
+		font-size: 28px;
+		line-height: 33px;
 		letter-spacing: 0.03em;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
+
+		@media screen and (min-width: $desctop) {
+			font-size: 36px;
+			line-height: 1.16;
+			margin-bottom: 50px;
+		}
 	}
 	&__list {
 		flex-wrap: wrap;
+		gap: 30px;
 	}
 	&__icon {
 		fill: currentColor;
@@ -16,14 +23,22 @@
 }
 
 .client__item {
-	&:not(:last-child) {
-		margin-right: 30px;
+	flex-basis: 100%;
+	
+	@media screen and (min-width: $mobile) {
+		flex-basis: calc((100% - var(--gap-distance)) / var(--client-mobile-items));
+	}
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc((100% - var(--gap-distance) * (var(--client-tablet-items) - 1)) / var(--client-tablet-items));
+	}
+	@media screen and (min-width: $desctop) {
+		max-width: 170px;
 	}
 }
 
 .client__link {
 	height: 92px;
-	width: 170px;
+	width: 100%;
 	border: 1px solid var(--icon-fill);
 	border-radius: 4px;
 	color: var(--icon-fill);
