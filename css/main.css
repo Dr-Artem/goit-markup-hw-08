@@ -482,14 +482,17 @@ img {
 .contacts__link.number {
   font-size: 34px;
   line-height: 40px;
-  color: #2196f3;
+}
+@media screen and (max-width: 767.98px) {
+  .contacts__link.number {
+    color: #2196f3;
+  }
 }
 @media screen and (min-width: 768px) {
   .contacts__link.number {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    color: var(--muted-text-color);
     font-size: 12px;
     line-height: 1.16;
     padding-bottom: 20px;
